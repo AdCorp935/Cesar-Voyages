@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>César Voyages — Agence de Voyages de Prestige, Paris 16ᵉ</title>
+<meta name="description" content="César Voyages conçoit des voyages sur-mesure d'exception depuis son agence du 16ᵉ arrondissement de Paris : conciergerie privée, vols et adresses confidentielles, accompagnement 24/7.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M6 17.5L14 14.5V8.5L16 7.5L18 8.5V14.5L26 17.5V19.5L18 17V22L20.5 23.5V25L16 24L11.5 25V23.5L14 22V17L6 19.5V17.5Z" fill="currentColor"/>
+      </svg>
+      CÉSAR VOYAGES<span class="reg">®</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#destinations">Destinations</a>
+      <a href="#approche">Services</a>
+      <a href="#agence">L'Agence</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn-filled">
+        Prendre rendez-vous
+        <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= MOBILE MENU ============================= -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#approche">Services</a></li>
+    <li><a href="#agence">L'Agence</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mm-contact">
+    68 Avenue Victor Hugo, 75116 Paris<br>
+    +33 1 45 00 00 00 — bonjour@cesar-voyages.fr
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="hero">
+  <div class="hero-clouds"><span></span><span></span><span></span></div>
+
+  <div class="hero-inner">
+    <div class="hero-top-row">
+      <h1 class="hero-wordmark">CÉSAR<br>VOYAGES</h1>
+      <div class="hero-headline-block">
+        <p class="eyebrow">Agence de voyages de prestige — Paris 16ᵉ</p>
+        <p class="hero-headline">L'exception,<br><span class="accent">en voyage.</span></p>
+        <p class="hero-sub">Depuis notre agence du 16ᵉ arrondissement, nous concevons des voyages sur-mesure pour une clientèle exigeante — vols privés, adresses confidentielles, accompagnement absolu.</p>
+      </div>
+    </div>
+
+    <div class="hero-plane-stage" aria-hidden="true">
+      <svg class="hero-plane" viewBox="0 0 640 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- main wings (top view, swept) -->
+        <path d="M352 124 L 118 34 L 96 46 L 300 140 Z" fill="#000d10"/>
+        <path d="M352 136 L 118 226 L 96 214 L 300 120 Z" fill="#000d10"/>
+        <!-- tail wings -->
+        <path d="M150 122 L 44 78 L 40 92 L 158 132 Z" fill="#000d10"/>
+        <path d="M150 138 L 44 182 L 40 168 L 158 128 Z" fill="#000d10"/>
+        <!-- vertical fin -->
+        <path d="M96 122 L 60 62 L 80 66 L 118 124 Z" fill="#000d10" opacity="0.9"/>
+        <!-- fuselage -->
+        <path d="M52 130
+                 C 180 118 380 120 560 127
+                 L 628 130
+                 L 560 133
+                 C 380 140 180 142 52 130 Z" fill="#000d10"/>
+        <!-- cockpit accent -->
+        <ellipse cx="588" cy="129.5" rx="14" ry="4" fill="#bc7155"/>
+      </svg>
+    </div>
+
+    <div class="hero-bottom-row">
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-filled">
+          Composer mon voyage
+          <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#agence" class="btn btn-ghost">Découvrir l'agence</a>
+      </div>
+      <div class="scroll-cue">
+        <span class="dot">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Défiler
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STATS ============================= -->
+<section class="stat-bar">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="18"><span class="num">0</span><span class="suffix"> ans</span></span>
+        <span class="stat-label">D'expertise du voyage sur-mesure</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <span class="stat-num"><span class="num" data-count="600">0</span><span class="suffix">+</span></span>
+        <span class="stat-label">Voyages conçus pour nos clients</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-num"><span class="num" data-count="45">0</span></span>
+        <span class="stat-label">Destinations couvertes dans le monde</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <span class="stat-num">24<span class="suffix">/7</span></span>
+        <span class="stat-label">Conciergerie dédiée, en tout lieu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MARQUEE ============================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>MALDIVES</span><span>KYOTO</span><span>TOSCANE</span><span>SERENGETI</span><span>ISLANDE</span><span>DUBAÏ</span><span>PATAGONIE</span><span>BALI</span>
+    <span>MALDIVES</span><span>KYOTO</span><span>TOSCANE</span><span>SERENGETI</span><span>ISLANDE</span><span>DUBAÏ</span><span>PATAGONIE</span><span>BALI</span>
+  </div>
+</div>
+
+<!-- ============================= APPROCHE ============================= -->
+<section class="section-pad" id="approche">
+  <div class="wrap">
+    <div class="approach-head">
+      <div class="approach-head-inner reveal">
+        <p class="eyebrow eyebrow--dark-on-white">Notre approche</p>
+        <h2 class="section-title">Le voyage,<br>conçu sur-mesure.</h2>
+        <p>Chaque itinéraire César Voyages naît d'un entretien, non d'un catalogue. Nous sélectionnons vols, adresses et expériences avec la même exigence — pour que chaque détail porte votre signature.</p>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-block reveal">
+        <span class="feature-num">01</span>
+        <h3 class="feature-title">Conception sur-mesure</h3>
+        <p class="feature-desc">Un conseiller dédié construit votre itinéraire selon vos envies, votre rythme et vos exigences — aucun voyage n'est jamais dupliqué.</p>
+      </div>
+      <div class="feature-block reveal reveal-delay-1">
+        <span class="feature-num">02</span>
+        <h3 class="feature-title">Conciergerie privée 24/7</h3>
+        <p class="feature-desc">Une équipe joignable à toute heure, en tout lieu du monde, pour anticiper et résoudre avant même que vous n'ayez à demander.</p>
+      </div>
+      <div class="feature-block reveal reveal-delay-2">
+        <span class="feature-num">03</span>
+        <h3 class="feature-title">Vols &amp; adresses d'exception</h3>
+        <p class="feature-desc">Accès à des vols privés, suites confidentielles et tables fermées au public, réservés à un cercle restreint de clients.</p>
+      </div>
+      <div class="feature-block reveal reveal-delay-3">
+        <span class="feature-num">04</span>
+        <h3 class="feature-title">Accompagnement local</h3>
+        <p class="feature-desc">Des correspondants de confiance sur place, dans chaque destination, pour un voyage aussi fluide que privilégié.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FEATURED / SIGNATURE ============================= -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="wrap">
+    <div class="featured-card reveal">
+      <div>
+        <span class="featured-label">Voyage signature</span>
+        <h3 class="featured-title">Safari & Océan Indien<br>— 14 jours d'exception</h3>
+        <p class="featured-desc">Un safari privé au cœur du Botswana suivi d'un séjour dans une villa confidentielle des Maldives. Vol privé inter-étapes, guides francophones et accès exclusif aux réserves les plus préservées d'Afrique australe.</p>
+        <div class="featured-meta">
+          <div>Durée<strong>14 jours</strong></div>
+          <div>Formule<strong>Privée, sur-mesure</strong></div>
+          <div>Style<strong>Safari & Île</strong></div>
+        </div>
+        <a href="#contact" class="btn btn-ghost-white">
+          Découvrir cet itinéraire
+          <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="featured-visual" aria-hidden="true">
+        <svg viewBox="0 0 320 260" fill="none">
+          <circle cx="160" cy="130" r="90" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <circle cx="160" cy="130" r="60" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+          <path d="M60 190 L 100 120 L 140 160 L 190 90 L 230 130 L 260 70" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="260" cy="70" r="5" fill="#fff"/>
+          <path d="M60 190 Q 160 220 260 190" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="4 6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= DESTINATIONS ============================= -->
+<section class="section-pad" id="destinations">
+  <div class="wrap">
+    <div class="dest-head reveal">
+      <h2 class="section-title">Nos destinations<br>d'exception.</h2>
+      <p>Six territoires parmi les quarante-cinq que nous couvrons dans le monde — chacun conçu selon une exigence identique.</p>
+    </div>
+
+    <div class="flight-path-wrap reveal" id="flightPathWrap">
+      <svg class="flight-path-svg" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 20,60 C 220,-10 420,170 620,40 C 820,-60 1020,160 1180,60"/>
+      </svg>
+      <svg class="flight-plane" width="26" height="26" viewBox="0 0 24 24" fill="#bc7155" aria-hidden="true">
+        <path d="M2 16l7-2 4.5 4.5L15 17l-3-6 7-5-1-2-8 3-5-3-2 1 4 4-6 2z"/>
+      </svg>
+
+      <div class="dest-grid">
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#1c5c6b,#0a2e3a);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M3 18c3-2 5 2 8 0s5 2 8 0M3 12c3-2 5 2 8 0s5 2 8 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Océan Indien</p>
+            <h3 class="dest-name">Maldives</h3>
+            <p class="dest-desc">Villas sur pilotis, lagons privés et plongée confidentielle.</p>
+          </div>
+        </a>
+
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#7a3b3b,#2a1414);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 5v6l-7 5-7-5V8l7-5z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Japon</p>
+            <h3 class="dest-name">Kyoto</h3>
+            <p class="dest-desc">Temples séculaires, ryokans intimistes et jardins secrets.</p>
+          </div>
+        </a>
+
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#6b5a2e,#2e2412);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M3 20l4-10 3 6 2-4 3 8M3 20h18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Italie</p>
+            <h3 class="dest-name">Toscane</h3>
+            <p class="dest-desc">Villas viticoles, collines dorées et tables étoilées.</p>
+          </div>
+        </a>
+
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#4a3a1c,#1c150a);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M4 18c2-6 5-9 8-9s6 3 8 9" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="2" stroke="#fff" stroke-width="1.5"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Afrique australe</p>
+            <h3 class="dest-name">Botswana</h3>
+            <p class="dest-desc">Safaris privés au cœur du delta de l'Okavango.</p>
+          </div>
+        </a>
+
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#2e4a5c,#0e1c24);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-8 6-11 9-11s6 3 9 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M2 19h20" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Cercle polaire</p>
+            <h3 class="dest-name">Islande</h3>
+            <p class="dest-desc">Aurores boréales, glaciers et sources chaudes privées.</p>
+          </div>
+        </a>
+
+        <a class="dest-card" href="#contact">
+          <div class="dest-bg" style="background:linear-gradient(150deg,#5c4a2e,#241c0e);"></div>
+          <div class="dest-overlay"></div>
+          <svg class="dest-icon" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <div class="dest-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="dest-content">
+            <p class="dest-country">Émirats arabes unis</p>
+            <h3 class="dest-name">Dubaï</h3>
+            <p class="dest-desc">Suites panoramiques, désert privé et service absolu.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONCIERGE DARK ============================= -->
+<section class="section-pad dark-section" id="agence">
+  <div class="grid-lines"></div>
+  <div class="wrap dark-inner">
+    <div class="dark-col">
+      <p class="eyebrow eyebrow--light reveal">Conciergerie & assistance voyage</p>
+      <h2 class="section-title text-white reveal reveal-delay-1">Une conciergerie<br>à votre service.</h2>
+      <p class="lead reveal reveal-delay-2">Notre agence du 16ᵉ arrondissement reste votre point de contact unique, avant, pendant et après le voyage — où que vous soyez dans le monde.</p>
+
+      <div class="concierge-list">
+        <div class="concierge-item reveal">
+          <div class="concierge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v5l4 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="concierge-text">
+            <strong>Assistance 24/7 dans le monde entier</strong>
+            <span>Une ligne directe joignable à toute heure, en tout fuseau horaire.</span>
+          </div>
+        </div>
+        <div class="concierge-item reveal reveal-delay-1">
+          <div class="concierge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18V9l8-5 8 5v9M4 18h16M8 18v-5h8v5" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div class="concierge-text">
+            <strong>Transferts privés & chauffeurs</strong>
+            <span>Des liaisons discrètes entre aéroports, résidences et adresses.</span>
+          </div>
+        </div>
+        <div class="concierge-item reveal reveal-delay-2">
+          <div class="concierge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v12H8l-4 4V4z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div class="concierge-text">
+            <strong>Réservations exclusives</strong>
+            <span>Tables fermées, spectacles complets et accès sur-mesure.</span>
+          </div>
+        </div>
+        <div class="concierge-item reveal reveal-delay-3">
+          <div class="concierge-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div class="concierge-text">
+            <strong>Assurance voyage premium</strong>
+            <span>Une couverture complète, pensée pour l'exigence de nos clients.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow eyebrow--dark-on-white">Témoignages</p>
+      <h2 class="section-title">Ils nous ont fait confiance.</h2>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="testi-quote">"Un service d'une discrétion et d'une précision rares. Notre safari au Botswana restera l'un des plus beaux voyages de notre vie."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M.</div>
+          <div><strong>Famille M.</strong><span>Cliente depuis 2019</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="testi-quote">"La conciergerie a résolu un imprévu à Kyoto en moins d'une heure, à trois heures du matin, heure de Paris. C'est ça, l'exception."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">L.</div>
+          <div><strong>Antoine L.</strong><span>Client depuis 2021</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="testi-quote">"Chaque itinéraire est unique. On sent que rien n'est jamais recyclé d'un client à l'autre — c'est extrêmement rare aujourd'hui."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R.</div>
+          <div><strong>Sophie R.</strong><span>Cliente depuis 2017</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="section-pad contact-section" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark-on-white">Contact</p>
+        <h2 class="contact-heading">Planifions votre<br>prochain voyage.</h2>
+
+        <!-- TODO: remplacer par les coordonnées réelles de l'agence -->
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="#000d10" stroke-width="1.5"/><circle cx="12" cy="9" r="2.3" stroke="#000d10" stroke-width="1.5"/></svg></div>
+            <div><strong>Notre agence</strong><span>68 Avenue Victor Hugo, 75116 Paris</span></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 01-2.2 2A19.8 19.8 0 013 5.2 2 2 0 015 3h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.4 2.1L9 10.7a16 16 0 006.3 6.3l1.3-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z" stroke="#000d10" stroke-width="1.5"/></svg></div>
+            <div><strong>Téléphone</strong><a href="tel:+33145000000">+33 1 45 00 00 00</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6z" stroke="#000d10" stroke-width="1.5"/><path d="M4 7l8 6 8-6" stroke="#000d10" stroke-width="1.5"/></svg></div>
+            <div><strong>Email</strong><a href="mailto:bonjour@cesar-voyages.fr">bonjour@cesar-voyages.fr</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2" stroke="#000d10" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#000d10" stroke-width="1.5"/></svg></div>
+            <div><strong>Horaires</strong><span>Lun–Ven, 9h30–19h — sur rendez-vous le samedi</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal-delay-1" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="fname">Prénom</label>
+            <input type="text" id="fname" name="fname" required placeholder="Votre prénom">
+          </div>
+          <div class="field">
+            <label for="lname">Nom</label>
+            <input type="text" id="lname" name="lname" required placeholder="Votre nom">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="vous@email.com">
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00">
+          </div>
+        </div>
+        <div class="field">
+          <label for="dest">Destination envisagée</label>
+          <input type="text" id="dest" name="dest" placeholder="Maldives, Kyoto, Toscane…">
+        </div>
+        <div class="field">
+          <label for="message">Votre projet de voyage</label>
+          <textarea id="message" name="message" placeholder="Décrivez-nous vos envies, dates et nombre de voyageurs…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-filled">
+          Envoyer ma demande
+          <svg class="btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-note">Un conseiller César Voyages vous répond sous 24h ouvrées.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-wordmark">CÉSAR<br>VOYAGES<span class="reg">®</span></div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="#destinations">Maldives</a></li>
+            <li><a href="#destinations">Kyoto</a></li>
+            <li><a href="#destinations">Toscane</a></li>
+            <li><a href="#destinations">Botswana</a></li>
+            <li><a href="#destinations">Islande</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#approche">Voyage sur-mesure</a></li>
+            <li><a href="#agence">Conciergerie 24/7</a></li>
+            <li><a href="#approche">Vols privés</a></li>
+            <li><a href="#approche">Lune de miel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Agence</h4>
+          <ul>
+            <li><a href="#agence">À propos</a></li>
+            <li><a href="#destinations">Nos destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span>68 Avenue Victor Hugo</span></li>
+            <li><span>75116 Paris, France</span></li>
+            <li><a href="tel:+33145000000">+33 1 45 00 00 00</a></li>
+            <li><a href="mailto:bonjour@cesar-voyages.fr">bonjour@cesar-voyages.fr</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> César Voyages. Tous droits réservés.</span>
+      <div class="footer-legal">
+        <a href="#">Mentions légales</a>
+        <a href="#">CGV</a>
+        <a href="#">Confidentialité</a>
+      </div>
+      <div class="footer-social">
+        <a class="social-btn" href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#fff" stroke-width="1.5"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17M11 10.5V17" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <a class="social-btn" href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a3 3 0 00-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V8z" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
