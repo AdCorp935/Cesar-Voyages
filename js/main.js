@@ -2,6 +2,77 @@
   'use strict';
 
   /* ---------------------------------------------------------------------
+     Photography slots
+
+     Each slot lists candidate photo URLs, tried in order until one loads.
+     The drawn artwork stays in the markup and is only swapped out once a
+     real photograph is in hand, so a dead or blocked URL degrades to the
+     illustration instead of a hole in the layout.
+  --------------------------------------------------------------------- */
+  var UNSPLASH = 'https://images.unsplash.com/photo-';
+
+  var photoSlots = [
+    {
+      artId: 'heroPlaneArt',
+      mount: '.hero-plane-stage',
+      className: 'hero-plane hero-photo',
+      alt: 'Jet privé en vol',
+      onLoad: function () {
+        var shadow = document.querySelector('.hero-plane-shadow');
+        if (shadow) shadow.style.display = 'none';
+      },
+      urls: [
+        UNSPLASH + '1436491865332-7a61a109cc05?q=85&w=1800&auto=format&fit=crop',
+        UNSPLASH + '1540962351504-03099e0a754b?q=85&w=1800&auto=format&fit=crop',
+        UNSPLASH + '1474302770737-173ee21bab63?q=85&w=1800&auto=format&fit=crop'
+      ]
+    },
+    {
+      artId: 'featuredArt',
+      mount: '.featured-visual',
+      className: 'featured-photo',
+      alt: 'Safari privé et océan Indien',
+      urls: [
+        UNSPLASH + '1547471080-7cc2caa01a7e?q=85&w=1400&auto=format&fit=crop',
+        UNSPLASH + '1534177616072-ef7dc120449d?q=85&w=1400&auto=format&fit=crop',
+        // known-good: already serving the Botswana destination card
+        UNSPLASH + '1516426122078-c23e76319801?q=85&w=1400&auto=format&fit=crop'
+      ]
+    }
+  ];
+
+  photoSlots.forEach(function (slot) {
+    var art = document.getElementById(slot.artId);
+    var mount = document.querySelector(slot.mount);
+    if (!art || !mount) return;
+
+    var index = 0;
+    (function attempt() {
+      if (index >= slot.urls.length) return;
+      var url = slot.urls[index];
+      var probe = new Image();
+
+      probe.onload = function () {
+        var img = document.createElement('img');
+        img.className = slot.className;
+        img.src = url;
+        img.alt = slot.alt;
+        mount.appendChild(img);
+        mount.classList.add('has-photo');
+        art.style.display = 'none';
+        if (slot.onLoad) slot.onLoad();
+      };
+
+      probe.onerror = function () {
+        index++;
+        attempt();
+      };
+
+      probe.src = url;
+    })();
+  });
+
+  /* ---------------------------------------------------------------------
      Sticky header on scroll
   --------------------------------------------------------------------- */
   var header = document.getElementById('siteHeader');
