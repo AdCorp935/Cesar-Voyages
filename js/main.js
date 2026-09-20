@@ -51,7 +51,7 @@
   /* ---------------------------------------------------------------------
      Scroll reveal via IntersectionObserver
   --------------------------------------------------------------------- */
-  var revealEls = document.querySelectorAll('.reveal');
+  var revealEls = document.querySelectorAll('.reveal, .reveal-clip');
 
   if ('IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {

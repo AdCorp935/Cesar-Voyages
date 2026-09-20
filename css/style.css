@@ -681,6 +681,35 @@ h2.section-title {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+/* Headline reveal: the type slides up from behind its own baseline.
+   The mask must be a wrapper, not clip-path on the heading itself —
+   a zero-height clip also zeroes the IntersectionObserver ratio, so the
+   heading would never be told to reveal. */
+.reveal-clip {
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.reveal-clip > span {
+  display: block;
+  transform: translateY(108%);
+  transition: transform 1.15s var(--ease-out);
+}
+
+.reveal-clip.is-visible > span { transform: translateY(0); }
+
+/* Film grain — sits above everything, ignores pointer events */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
 /* ==========================================================================
    Manifesto / Approach section
    ========================================================================== */
