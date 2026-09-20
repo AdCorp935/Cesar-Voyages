@@ -500,23 +500,12 @@ h2.section-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: min(78vw, 620px);
+  width: min(84vw, 780px);
   transform: translate(-50%, -50%) rotate(-6deg);
   opacity: 0;
+  filter: drop-shadow(0 26px 34px rgba(0, 13, 16, 0.22));
   animation: planeIn 1.3s var(--ease-out) 0.5s forwards, planeFloat 7s ease-in-out 1.9s infinite;
 }
-
-.hero-plane-photo {
-  width: min(72vw, 760px);
-  height: clamp(220px, 30vw, 380px);
-  object-fit: cover;
-  border-radius: 12px;
-  -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 50%, black 48%, transparent 82%);
-  mask-image: radial-gradient(ellipse 62% 58% at 50% 50%, black 48%, transparent 82%);
-  filter: drop-shadow(0 30px 40px rgba(0, 13, 16, 0.25));
-}
-
-.hero-plane-svg { width: min(78vw, 620px); }
 
 .hero-plane-shadow {
   position: absolute;
@@ -835,10 +824,18 @@ h2.section-title {
 
 .featured-visual {
   position: relative;
-  height: 260px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.featured-visual svg { width: 100%; height: 100%; }
+.featured-visual svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.featured-card:hover .featured-visual svg { transform: scale(1.05); }
 
 /* ==========================================================================
    Destinations

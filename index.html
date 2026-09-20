@@ -74,29 +74,73 @@
 
     <div class="hero-plane-stage" aria-hidden="true">
       <div class="hero-plane-shadow"></div>
-      <img
-        class="hero-plane hero-plane-photo"
-        src="https://images.unsplash.com/photo-1583396060370-4be6c1eb7cd6?q=80&w=1400&auto=format&fit=crop"
-        alt=""
-        loading="eager"
-        onerror="this.remove(); document.getElementById('heroPlaneFallback').style.display='block';">
-      <svg id="heroPlaneFallback" class="hero-plane hero-plane-svg" viewBox="0 0 640 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
-        <!-- main wings (top view, swept) -->
-        <path d="M352 124 L 118 34 L 96 46 L 300 140 Z" fill="#000d10"/>
-        <path d="M352 136 L 118 226 L 96 214 L 300 120 Z" fill="#000d10"/>
-        <!-- tail wings -->
-        <path d="M150 122 L 44 78 L 40 92 L 158 132 Z" fill="#000d10"/>
-        <path d="M150 138 L 44 182 L 40 168 L 158 128 Z" fill="#000d10"/>
+      <svg class="hero-plane" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="fuselage" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="34%" stop-color="#eef1f3"/>
+            <stop offset="62%" stop-color="#c3cacf"/>
+            <stop offset="100%" stop-color="#7d868c"/>
+          </linearGradient>
+          <linearGradient id="finGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f4f6f7"/>
+            <stop offset="100%" stop-color="#aab2b8"/>
+          </linearGradient>
+          <linearGradient id="wingGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b8c0c5"/>
+            <stop offset="100%" stop-color="#6d767c"/>
+          </linearGradient>
+          <linearGradient id="engineGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e9edef"/>
+            <stop offset="55%" stop-color="#aeb6bb"/>
+            <stop offset="100%" stop-color="#6b7379"/>
+          </linearGradient>
+        </defs>
+
+        <!-- horizontal stabilizer (T-tail) -->
+        <path d="M88 60 L 196 50 L 214 57 L 104 68 Z" fill="#c8cfd4"/>
         <!-- vertical fin -->
-        <path d="M96 122 L 60 62 L 80 66 L 118 124 Z" fill="#000d10" opacity="0.9"/>
+        <path d="M150 158 L 104 58 L 150 54 L 232 150 Z" fill="url(#finGrad)"/>
+        <path d="M150 158 L 232 150 L 210 158 Z" fill="#9aa3a9"/>
+
+        <!-- rear-mounted engine nacelle -->
+        <path d="M212 118 h 96 a 26 26 0 0 1 0 52 h -96 a 26 26 0 0 1 0 -52 Z" fill="url(#engineGrad)"/>
+        <path d="M212 118 a 26 26 0 0 0 0 52 a 30 26 0 0 0 0 -52 Z" fill="#59626a"/>
+        <path d="M216 128 h 88 a 6 6 0 0 1 0 12 h -88 Z" fill="#ffffff" opacity="0.45"/>
+        <!-- pylon joining engine to fuselage -->
+        <path d="M300 160 L 330 150 L 352 176 L 312 178 Z" fill="#98a1a7"/>
+
         <!-- fuselage -->
-        <path d="M52 130
-                 C 180 118 380 120 560 127
-                 L 628 130
-                 L 560 133
-                 C 380 140 180 142 52 130 Z" fill="#000d10"/>
-        <!-- cockpit accent -->
-        <ellipse cx="588" cy="129.5" rx="14" ry="4" fill="#bc7155"/>
+        <path d="M862 170
+                 C 830 154 796 146 742 143
+                 C 600 136 420 134 300 138
+                 C 236 140 178 134 118 120
+                 C 150 148 158 168 160 182
+                 C 232 192 300 194 420 192
+                 C 580 190 720 188 800 184
+                 C 830 182 850 177 862 170 Z"
+              fill="url(#fuselage)"/>
+
+        <!-- clay cheatline -->
+        <path d="M188 176 C 320 186 560 184 800 178 C 812 178 812 182 800 183 C 560 189 320 191 186 181 Z" fill="#bc7155"/>
+
+        <!-- cabin windows -->
+        <g fill="#2b3439">
+          <rect x="430" y="155" width="15" height="10" rx="4"/>
+          <rect x="474" y="154" width="15" height="10" rx="4"/>
+          <rect x="518" y="153" width="15" height="10" rx="4"/>
+          <rect x="562" y="152" width="15" height="10" rx="4"/>
+          <rect x="606" y="152" width="15" height="10" rx="4"/>
+          <rect x="650" y="151" width="15" height="10" rx="4"/>
+          <rect x="694" y="151" width="15" height="10" rx="4"/>
+        </g>
+        <!-- cockpit glass -->
+        <path d="M786 152 C 806 153 822 158 834 165 L 800 166 C 792 161 788 157 786 152 Z" fill="#2b3439"/>
+
+        <!-- near wing (in front, swept back) -->
+        <path d="M452 184 L 250 252 L 322 256 L 536 190 Z" fill="url(#wingGrad)"/>
+        <!-- winglet -->
+        <path d="M250 252 L 236 232 L 248 230 L 262 250 Z" fill="#7f888e"/>
       </svg>
     </div>
 
@@ -205,12 +249,73 @@
         </a>
       </div>
       <div class="featured-visual" aria-hidden="true">
-        <svg viewBox="0 0 320 260" fill="none">
-          <circle cx="160" cy="130" r="90" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-          <circle cx="160" cy="130" r="60" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
-          <path d="M60 190 L 100 120 L 140 160 L 190 90 L 230 130 L 260 70" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="260" cy="70" r="5" fill="#fff"/>
-          <path d="M60 190 Q 160 220 260 190" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="4 6"/>
+        <svg viewBox="0 0 360 280" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e6b49c"/>
+              <stop offset="55%" stop-color="#d69173"/>
+              <stop offset="100%" stop-color="#c47c5f"/>
+            </linearGradient>
+            <linearGradient id="seaWarm" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#8c5c49"/>
+              <stop offset="100%" stop-color="#5c3a2e"/>
+            </linearGradient>
+            <clipPath id="frameClip">
+              <rect x="0" y="0" width="360" height="280"/>
+            </clipPath>
+          </defs>
+
+          <g clip-path="url(#frameClip)">
+            <!-- sky -->
+            <rect x="0" y="0" width="360" height="280" fill="url(#skyWarm)"/>
+            <!-- sun -->
+            <circle cx="248" cy="78" r="34" fill="#f6dcc8" opacity="0.92"/>
+            <!-- distant hills -->
+            <path d="M0 150 C 60 126 104 142 150 134 C 208 124 250 140 360 128 L 360 168 L 0 168 Z" fill="#a9674e" opacity="0.75"/>
+            <path d="M0 162 C 78 146 140 160 214 152 C 286 144 322 154 360 148 L 360 178 L 0 178 Z" fill="#94573f" opacity="0.85"/>
+
+            <!-- savanna ground -->
+            <rect x="0" y="176" width="360" height="40" fill="#8a5038"/>
+
+            <!-- large acacia, flat-topped -->
+            <path d="M84 178 C 84 164 86 152 88 142 L 93 142 C 94 154 95 166 95 178 Z" fill="#3a2016"/>
+            <path d="M89 150 L 68 140 M 92 148 L 112 138" stroke="#3a2016" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M48 138 C 62 126 118 124 132 136 C 116 132 96 131 88 131 C 74 131 58 133 48 138 Z" fill="#3a2016"/>
+
+            <!-- small distant acacia -->
+            <path d="M306 178 C 306 170 307 164 308 158 L 311 158 C 312 166 312 172 312 178 Z" fill="#40251a"/>
+            <path d="M292 156 C 300 148 326 147 334 155 C 324 152 314 151 309 151 C 301 151 297 153 292 156 Z" fill="#40251a"/>
+
+            <!-- birds -->
+            <g stroke="#7a4331" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8">
+              <path d="M168 96 q 6 -5 12 0"/>
+              <path d="M182 86 q 5 -4 10 0"/>
+              <path d="M196 100 q 4 -3 8 0"/>
+            </g>
+
+            <!-- ocean -->
+            <rect x="0" y="212" width="360" height="68" fill="url(#seaWarm)"/>
+            <path d="M0 212 C 60 206 120 218 180 212 C 240 206 300 218 360 210 L 360 224 L 0 224 Z" fill="#a06649" opacity="0.55"/>
+            <!-- sun shimmer on water -->
+            <g stroke="#f0cdb4" stroke-linecap="round" fill="none" opacity="0.45">
+              <path d="M230 230 q 10 -4 20 0 q 10 4 20 0" stroke-width="2.4"/>
+              <path d="M238 242 q 8 -4 16 0 q 8 4 16 0" stroke-width="2"/>
+              <path d="M228 254 q 11 -4 22 0 q 11 4 22 0" stroke-width="2.4"/>
+              <path d="M242 266 q 7 -3 14 0 q 7 3 14 0" stroke-width="1.8"/>
+            </g>
+            <!-- wave lines -->
+            <g stroke="#e7c2ab" stroke-width="1.6" stroke-linecap="round" opacity="0.5" fill="none">
+              <path d="M28 244 q 13 -6 26 0"/>
+              <path d="M78 262 q 13 -6 26 0"/>
+              <path d="M306 250 q 13 -6 26 0"/>
+              <path d="M150 272 q 13 -6 26 0"/>
+            </g>
+
+            <!-- dhow with lateen sail -->
+            <path d="M104 232 L 104 190 L 136 230 Z" fill="#f4e2d4"/>
+            <path d="M104 190 L 104 232" stroke="#3a2016" stroke-width="2"/>
+            <path d="M86 232 L 144 232 L 133 242 L 97 242 Z" fill="#3a2016"/>
+          </g>
         </svg>
       </div>
     </div>
