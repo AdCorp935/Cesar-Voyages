@@ -135,6 +135,7 @@
   --radius-img: 20px;
   --radius-btn: 10px;
   --radius-pill: 9999px;
+  --nav-capsule-h: 52px;
 
   --section-gap: 64px;
   --pad-side: 30px;
@@ -310,6 +311,26 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   white-space: nowrap;
 }
 
+/* même bulle crème que la capsule des catégories — cadré sur la barre du
+   haut, le wordmark du pied de page gardant son grand corps nu */
+.nav .wordmark {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--olive-ink);
+  border-radius: var(--radius-nav-capsule, 32px);
+  background: rgba(255, 244, 236, 0.78);
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  padding: 0 22px;
+  min-height: var(--nav-capsule-h);
+  transition: background-color 0.4s var(--ease), color 0.35s var(--ease);
+}
+
+.nav .wordmark:hover { background: var(--olive-ink); color: var(--linen-cream); }
+
+.nav.is-stuck .wordmark { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.nav.is-stuck .wordmark:hover { background: var(--olive-ink); }
+
 /* Capsule à filet olive : les catégories se détachent du fond, y compris
    par-dessus la photo du hero.
    center + nowrap : les liens restent sur une seule ligne et sur la même
@@ -326,6 +347,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   backdrop-filter: blur(10px) saturate(1.2);
   -webkit-backdrop-filter: blur(10px) saturate(1.2);
   padding: 6px;
+  min-height: var(--nav-capsule-h);
   transition: background-color 0.4s var(--ease);
 }
 
@@ -352,8 +374,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   border: 1px solid var(--olive-ink);
   border-radius: var(--radius-pill);
   background: var(--linen-cream);
-  padding: 9px 16px;
+  padding: 0 16px;
+  min-height: var(--nav-capsule-h);
   font-size: 14px;
+  white-space: nowrap;
   transition: background-color 0.35s var(--ease), color 0.35s var(--ease);
 }
 
@@ -363,8 +387,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   display: none;
   border: 1px solid var(--olive-ink);
   border-radius: var(--radius-pill);
-  padding: 9px 16px;
+  padding: 0 18px;
+  min-height: var(--nav-capsule-h);
   font-size: 14px;
+  align-items: center;
 }
 
 @media (max-width: 880px) {
