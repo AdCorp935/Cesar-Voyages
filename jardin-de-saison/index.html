@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jardin de Saison — Primeur à Paris 15ᵉ</title>
-<meta name="description" content="Jardin de Saison, primeur à Paris 15ᵉ : fruits et légumes de saison choisis chaque matin, épicerie fine et conseils de cuisine.">
+<title>Jardin de Saison — Primeur & épicerie fine asiatique, Paris 15ᵉ</title>
+<meta name="description" content="Jardin de Saison, primeur et épicerie fine asiatique à Paris 15ᵉ : fruits et légumes de saison choisis chaque matin, sauces, nouilles, thés et aromates d'Asie.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳</text></svg>">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div>
 
 <!-- ============================ NAV ============================ -->
 <header class="nav" id="nav">
@@ -16,7 +19,7 @@
 
   <nav class="nav-links">
     <a href="#letal">L'étal</a>
-    <a href="#saison">De saison</a>
+    <a href="#epicerie">L'épicerie</a>
     <a href="#panier">Le panier</a>
     <a href="#recettes">Recettes</a>
     <a href="#infos">Nous trouver</a>
@@ -37,11 +40,11 @@
 
 <div class="mobile-panel" id="mobilePanel">
   <a href="#letal">L'étal</a>
-  <a href="#saison">De saison</a>
+  <a href="#epicerie">L'épicerie</a>
   <a href="#panier">Le panier</a>
   <a href="#recettes">Recettes</a>
   <a href="#infos">Nous trouver</a>
-  <div class="mp-foot">Paris 15ᵉ — ouvert du mardi au dimanche</div>
+  <div class="mp-foot">Primeur &amp; épicerie asiatique — Paris 15ᵉ</div>
 </div>
 
 <main id="top">
@@ -54,7 +57,7 @@
   <div class="hero-scrim"></div>
 
   <div class="hero-content">
-    <p class="badge">Primeur — Paris 15ᵉ</p>
+    <p class="badge">Primeur &amp; épicerie fine asiatique — Paris 15ᵉ</p>
     <p class="hero-name mask-reveal"><span>Jardin de Saison</span></p>
     <h1 class="display hero-title mask-reveal"><span>Le meilleur de la saison, chaque matin.</span></h1>
     <div class="hero-foot">
@@ -85,7 +88,7 @@
   <div class="inner manifesto">
     <p class="badge reveal">De saison, rien d'autre</p>
     <h2 class="heading mask-reveal"><span>On ne vend que ce qui pousse maintenant.</span></h2>
-    <p class="lede reveal d2">Pas de fraises en décembre, pas de tomates en mars. Chaque matin, nous choisissons à Rungis et chez nos producteurs d'Île-de-France ce qui est réellement mûr — et rien d'autre. Ce qui manque à l'étal manque parce que ce n'est pas la saison.</p>
+    <p class="lede reveal d2">Pas de fraises en décembre, pas de tomates en mars. Chaque matin, nous choisissons à Rungis et chez nos producteurs d'Île-de-France ce qui est réellement mûr. Et sur l'autre moitié de la boutique, la même exigence appliquée à l'Asie : sauces brassées lentement, thés de récolte, aromates livrés frais.</p>
     <a href="#panier" class="btn btn--ghost reveal d3">
       Voir l'étal du jour
       <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -128,9 +131,9 @@
     <div class="split">
       <div class="split-text reveal">
         <p class="split-index">03 — Épicerie</p>
-        <h3 class="heading-sm">Ce qu'il faut autour.</h3>
-        <p class="lede">Huile d'olive de première pression, sel de Guérande, herbes séchées, fromages de garde, pain au levain le week-end. Le strict nécessaire pour finir un plat.</p>
-        <a href="#recettes" class="link-arrow">Voir les recettes
+        <h3 class="heading-sm">Deux cuisines, un seul comptoir.</h3>
+        <p class="lede">D'un côté l'huile d'olive de première pression et le sel de Guérande. De l'autre la sauce soja brassée en fût, le vinaigre de riz noir et le poivre de Sichuan. On tient les deux avec le même sérieux.</p>
+        <a href="#epicerie" class="link-arrow">Entrer dans l'épicerie
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -142,11 +145,90 @@
   </div>
 </section>
 
+<!-- ============================ ÉPICERIE ASIATIQUE ============================ -->
+<section class="band band--peach epicerie" id="epicerie">
+  <div class="inner">
+    <div class="epicerie-head">
+      <p class="badge reveal">Épicerie fine asiatique</p>
+      <h2 class="heading mask-reveal"><span>L'Asie, au même<br>standard que l'étal.</span></h2>
+      <p class="lede reveal d2">On choisit une sauce soja comme on choisit une pêche : en regardant qui l'a faite, depuis combien de temps, et avec quoi. Cinq rayons, tenus par les mêmes gens qui pèsent vos poireaux.</p>
+    </div>
+
+    <div class="epicerie-grid">
+      <ol class="epicerie-list" id="epicerieList">
+        <li class="ep-item is-active" data-idx="0">
+          <span class="ep-num">01</span>
+          <div>
+            <h3>Sauces &amp; condiments</h3>
+            <p>Sauce soja brassée en fût pendant dix-huit mois, vinaigre de riz noir de Zhenjiang, miso d'orge, gochujang fermenté, huile de sésame grillé.</p>
+          </div>
+        </li>
+        <li class="ep-item" data-idx="1">
+          <span class="ep-num">02</span>
+          <div>
+            <h3>Nouilles &amp; riz</h3>
+            <p>Soba au sarrasin de Nagano, ramen frais livrés le jeudi, riz koshihikari, riz gluant de Thaïlande, galettes de riz.</p>
+          </div>
+        </li>
+        <li class="ep-item" data-idx="2">
+          <span class="ep-num">03</span>
+          <div>
+            <h3>Thés de récolte</h3>
+            <p>Sencha de Kyoto en primeur de mai, oolong de haute montagne de Taïwan, pu-erh vieilli sept ans, matcha de cérémonie.</p>
+          </div>
+        </li>
+        <li class="ep-item" data-idx="3">
+          <span class="ep-num">04</span>
+          <div>
+            <h3>Épices &amp; aromates</h3>
+            <p>Poivre de Sichuan récolté à la main, badiane, galanga, feuilles de combava, citronnelle et gingembre jeune livrés frais.</p>
+          </div>
+        </li>
+        <li class="ep-item" data-idx="4">
+          <span class="ep-num">05</span>
+          <div>
+            <h3>Le frais du jour</h3>
+            <p>Pak choï et chou chinois de nos maraîchers d'Île-de-France, shiso, pousses de bambou, tofu ferme livré deux fois par semaine.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="epicerie-sticky">
+        <div class="epicerie-stack" id="epicerieStack">
+          <div class="photo ep-photo is-active" data-idx="0" data-label="Sauces &amp; condiments"
+               data-photos="1582576163090-09d3b6f5b0b3|1596040033229-a9821ebd058d|1474979266404-7eaacbcd87c5"
+               data-alt="Sauces et condiments asiatiques"></div>
+          <div class="photo ep-photo" data-idx="1" data-label="Nouilles &amp; riz"
+               data-photos="1569718212165-3a8278d5f624|1552611052-33e04de081de|1585032226651-759b368d7246"
+               data-alt="Nouilles et riz"></div>
+          <div class="photo ep-photo" data-idx="2" data-label="Thés de récolte"
+               data-photos="1563822249548-9a72b6353cd1|1544787219-7f47ccb76574|1571934811356-5cc061b6821f"
+               data-alt="Thés verts en vrac"></div>
+          <div class="photo ep-photo" data-idx="3" data-label="Épices &amp; aromates"
+               data-photos="1596040033229-a9821ebd058d|1509358271058-acd22cc93898|1532336414038-cf19250c5757"
+               data-alt="Épices et aromates"></div>
+          <div class="photo ep-photo" data-idx="4" data-label="Le frais du jour"
+               data-photos="1576045057995-568f588f82fb|1540420773420-3366772f4999|1518977676601-b53f82aba655"
+               data-alt="Légumes asiatiques frais"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TICKER ASIE ============================ -->
+<div class="ticker ticker--reverse ticker--evoo" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Sauce soja</span><span>Poivre de Sichuan</span><span>Pak choï</span><span>Yuzu</span><span>Shiso</span><span>Nouilles soba</span><span>Combava</span><span>Gingembre jeune</span><span>Miso d'orge</span><span>Citronnelle</span>
+    <span>Sauce soja</span><span>Poivre de Sichuan</span><span>Pak choï</span><span>Yuzu</span><span>Shiso</span><span>Nouilles soba</span><span>Combava</span><span>Gingembre jeune</span><span>Miso d'orge</span><span>Citronnelle</span>
+  </div>
+</div>
+
 <!-- ============================ MOTS DISPERSÉS (vert) ============================ -->
 <section class="band band--green" id="verbes">
   <div class="inner verbs-head">
     <p class="badge reveal">Ce qu'on en fait</p>
-    <h2 class="heading-sm mask-reveal"><span>Six verbes, un seul étal.</span></h2>
+    <h2 class="heading-sm mask-reveal"><span>Huit verbes, un seul comptoir.</span></h2>
   </div>
 
   <div class="verb-banners inner">
@@ -209,6 +291,27 @@
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
+
+    <a class="verb-banner reveal" href="#epicerie" style="--vb-fallback:#8c3f24;"
+       data-photos="1512058564366-18510be2db19|1603133872878-684f208fb84b|1585032226651-759b368d7246"
+       data-alt="Wok en pleine cuisson">
+      <span class="vb-word">Sauter</span>
+      <span class="vb-note">Pak choï, ail, sauce soja. Deux minutes au wok, pas trois.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="verb-banner reveal" href="#epicerie" style="--vb-fallback:#5a4a2b;"
+       data-photos="1509358271058-acd22cc93898|1532336414038-cf19250c5757|1596040033229-a9821ebd058d"
+       data-alt="Marinade et aromates">
+      <span class="vb-word">Mariner</span>
+      <span class="vb-note">Gingembre jeune, vinaigre de riz, une nuit au frais.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
   </div>
 </section>
 
@@ -294,25 +397,25 @@
       </article>
 
       <article class="reveal d1 zoom-on-hover">
-        <div class="photo photo--portrait" data-label="Noix"
-             data-photos="1508747703725-719777637510|1563412885-e335dc95c512"
-             data-alt="Noix fraîches"></div>
+        <div class="photo photo--portrait" data-label="Pak choï"
+             data-photos="1576045057995-568f588f82fb|1518977676601-b53f82aba655"
+             data-alt="Pak choï frais"></div>
         <div class="produce-caption">
-          <span class="produce-name">Noix fraîches</span>
-          <span class="produce-price">9,50 € / kg</span>
+          <span class="produce-name">Pak choï</span>
+          <span class="produce-price">4,80 € / kg</span>
         </div>
-        <p class="produce-origin">Grenoble, Isère — AOP</p>
+        <p class="produce-origin">Maraîcher de Saclay — pour le wok</p>
       </article>
 
       <article class="reveal d2 zoom-on-hover">
-        <div class="photo photo--portrait" data-label="Blettes"
-             data-photos="1576045057995-568f588f82fb|1518977676601-b53f82aba655"
-             data-alt="Blettes fraîches"></div>
+        <div class="photo photo--portrait" data-label="Gingembre"
+             data-photos="1509358271058-acd22cc93898|1532336414038-cf19250c5757"
+             data-alt="Gingembre jeune"></div>
         <div class="produce-caption">
-          <span class="produce-name">Blettes</span>
-          <span class="produce-price">3,60 € / botte</span>
+          <span class="produce-name">Gingembre jeune</span>
+          <span class="produce-price">12,00 € / kg</span>
         </div>
-        <p class="produce-origin">Saclay, Essonne</p>
+        <p class="produce-origin">Arrivage du mardi — peau fine, sans fibre</p>
       </article>
 
       <article class="reveal d3 zoom-on-hover">
@@ -365,12 +468,12 @@
       </article>
 
       <article class="reveal d2 zoom-on-hover">
-        <div class="photo photo--square" data-label="Poêlée de champignons"
+        <div class="photo photo--square" data-label="Bouillon miso"
              data-photos="1518492104633-130d0cc84637|1476718406336-bb5a9690ee2a"
-             data-alt="Poêlée de champignons à l'ail"></div>
+             data-alt="Bouillon miso au potimarron"></div>
         <div class="recipe-meta">
           <p class="r-label">Recette</p>
-          <p class="r-name">Champignons à l'ail et persil plat</p>
+          <p class="r-name">Bouillon miso, potimarron et shiso</p>
           <a href="#recettes" class="link-arrow">Voir la recette
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>

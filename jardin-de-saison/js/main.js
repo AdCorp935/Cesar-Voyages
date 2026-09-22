@@ -149,6 +149,132 @@
   }
 
   /* ---------------------------------------------------------------------
+     Épicerie : la photo collante suit la rubrique lue
+
+     On repère la rubrique la plus proche du milieu de l'écran plutôt que
+     la première visible : sur une liste dont les entrées se chevauchent
+     dans le viewport, « la première visible » reste bloquée sur la même.
+  --------------------------------------------------------------------- */
+  var epItems = document.querySelectorAll('.ep-item');
+  var epPhotos = document.querySelectorAll('.ep-photo');
+
+  function syncEpicerie() {
+    if (!epItems.length) return;
+    var middle = window.innerHeight / 2;
+    var best = 0;
+    var bestGap = Infinity;
+
+    epItems.forEach(function (item, i) {
+      var r = item.getBoundingClientRect();
+      var gap = Math.abs(r.top + r.height / 2 - middle);
+      if (gap < bestGap) { bestGap = gap; best = i; }
+    });
+
+    epItems.forEach(function (item, i) { item.classList.toggle('is-active', i === best); });
+    epPhotos.forEach(function (ph, i) { ph.classList.toggle('is-active', i === best); });
+  }
+
+  epItems.forEach(function (item, i) {
+    item.addEventListener('mouseenter', function () {
+      epItems.forEach(function (o, j) { o.classList.toggle('is-active', j === i); });
+      epPhotos.forEach(function (ph, j) { ph.classList.toggle('is-active', j === i); });
+    });
+  });
+
+  /* ---------------------------------------------------------------------
+     Barre de progression, parallaxe des photos, épicerie :
+     un seul écouteur de défilement pour tout le monde
+  --------------------------------------------------------------------- */
+  var progress = document.getElementById('progress');
+  var parallaxSlots = document.querySelectorAll('.split .photo');
+  var rafPending = false;
+
+  function onFrame() {
+    var y = window.scrollY || window.pageYOffset;
+
+    if (progress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+    }
+
+    if (!reduceMotion) {
+      parallaxSlots.forEach(function (slot) {
+        var img = slot.querySelector('img');
+        if (!img) return;
+        var r = slot.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        // -1 → 1 selon la position du bloc dans l'écran
+        var rel = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+        img.style.transform = 'scale(1.08) translateY(' + (rel * -18).toFixed(2) + 'px)';
+      });
+    }
+
+    syncEpicerie();
+    rafPending = false;
+  }
+
+  document.addEventListener('scroll', function () {
+    if (rafPending) return;
+    rafPending = true;
+    window.requestAnimationFrame(onFrame);
+  }, { passive: true });
+
+  onFrame();
+
+  /* ---------------------------------------------------------------------
+     Nom de l'enseigne découpé en lettres
+  --------------------------------------------------------------------- */
+  var sigName = document.querySelector('.signature-name span');
+
+  if (sigName) {
+    var index = 0;
+    Array.prototype.slice.call(sigName.childNodes).forEach(function (node) {
+      if (node.nodeType !== 3) return; // on laisse le <br> tranquille
+      var frag = document.createDocumentFragment();
+      node.textContent.split('').forEach(function (ch) {
+        if (ch === ' ') {
+          frag.appendChild(document.createTextNode(' '));
+          return;
+        }
+        var el = document.createElement('span');
+        el.className = 'ltr';
+        el.style.setProperty('--i', index++);
+        el.textContent = ch;
+        frag.appendChild(el);
+      });
+      sigName.replaceChild(frag, node);
+    });
+  }
+
+  /* ---------------------------------------------------------------------
+     Curseur personnalisé, sur pointeur fin uniquement
+  --------------------------------------------------------------------- */
+  var cursor = document.getElementById('cursor');
+
+  if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var cx = 0, cy = 0, tx = 0, ty = 0, on = false;
+
+    document.addEventListener('mousemove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      if (!on) { on = true; cursor.classList.add('is-on'); }
+    });
+
+    document.addEventListener('mouseleave', function () { cursor.classList.remove('is-on'); });
+
+    (function loop() {
+      cx += (tx - cx) * 0.2;
+      cy += (ty - cy) * 0.2;
+      cursor.style.transform = 'translate(' + cx + 'px,' + cy + 'px) translate(-50%,-50%)';
+      window.requestAnimationFrame(loop);
+    })();
+
+    document.querySelectorAll('a, button, .verb-banner, .ep-item').forEach(function (el) {
+      el.addEventListener('mouseenter', function () { cursor.classList.add('is-lg'); });
+      el.addEventListener('mouseleave', function () { cursor.classList.remove('is-lg'); });
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      Horaires : jour courant et état ouvert/fermé
   --------------------------------------------------------------------- */
   var today = new Date().getDay();
