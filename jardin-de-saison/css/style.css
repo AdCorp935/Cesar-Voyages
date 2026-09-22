@@ -478,7 +478,18 @@ a:hover > .photo img,
   padding: 0 var(--pad-side) clamp(40px, 7vw, 80px);
 }
 
-.hero-content .badge { margin-bottom: 20px; }
+.hero-content .badge { margin-bottom: 16px; }
+
+/* le nom de l'enseigne, en capitales espacées au-dessus de l'accroche */
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: clamp(1.05rem, 2.1vw, 1.65rem);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
 
 .hero-title {
   max-width: 16ch;
@@ -631,72 +642,123 @@ a:hover > .photo img,
 
 .verbs-head .heading-sm { margin-top: 16px; }
 
-.scatter {
+.verb-banners {
+  display: grid;
+  gap: 14px;
+}
+
+.verb-banner {
   position: relative;
-  min-height: clamp(340px, 43vw, 500px);
-  max-width: 1080px;
-  margin: 0 auto;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius-img);
+  min-height: clamp(120px, 15vw, 180px);
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  padding: clamp(20px, 3vw, 36px);
+  /* couleur de repli : si la photo ne charge pas, la bannière reste une
+     plage colorée lisible plutôt qu'un trou */
+  background: var(--vb-fallback, var(--buttery-peach));
+  color: var(--linen-cream);
 }
 
-.scatter b {
+.verb-banner img {
   position: absolute;
-  font-family: var(--font-display);
-  font-weight: 500;
-  /* --s module l'échelle de chaque mot : le contraste de corps fait la
-     composition, un nuage de mots à taille égale tombe à plat. */
-  font-size: calc(var(--s, 1) * clamp(1.6rem, 3.3vw, 2.9rem));
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  transition: transform 0.55s var(--ease), opacity 0.45s var(--ease);
-  cursor: default;
-  white-space: nowrap;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
 }
 
-.scatter b.it { font-style: italic; }
-
-.scatter:hover b { opacity: 0.42; }
-.scatter b:hover { opacity: 1; transform: scale(1.06) rotate(0deg) !important; }
-
-.verb-note {
-  max-width: 44ch;
-  margin: clamp(26px, 4vw, 44px) auto 0;
-  text-align: center;
-  font-size: var(--text-body-lg);
-  min-height: 3.2em;
-  transition: opacity 0.3s var(--ease);
-}
-
-.verb-note .vn-word {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
-}
-
-.verb-note.is-idle { opacity: 0.55; }
-
-/* assez de marge verticale pour que l'ovale enveloppe aussi les accents */
-.scatter .circled { padding: 0.34em 0.6em; }
-
-.scatter .circled::before {
+/* voile olive : sans lui, le texte crème se perd sur les photos claires */
+.verb-banner::before {
   content: '';
   position: absolute;
-  inset: -0.04em;
-  border: 1px solid var(--olive-ink);
-  border-radius: 50%;
-  transform: rotate(-4deg);
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(60, 66, 46, 0.78) 0%, rgba(60, 66, 46, 0.52) 55%, rgba(60, 66, 46, 0.3) 100%);
+  transition: background 0.55s var(--ease);
 }
 
-@media (max-width: 720px) {
-  .scatter { min-height: 0; display: flex; flex-wrap: wrap; gap: 16px 26px; justify-content: center; }
-  /* relative, pas static : l'ovale de .circled est ancré au mot lui-même.
-     En static il se rattacherait à .scatter et s'étirerait sur tout le bloc. */
-  .scatter b {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-  }
+.verb-banner:hover img { transform: scale(1.06); }
+
+.verb-banner:hover::before {
+  background: linear-gradient(90deg, rgba(60, 66, 46, 0.62) 0%, rgba(60, 66, 46, 0.34) 55%, rgba(60, 66, 46, 0.14) 100%);
 }
+
+.vb-word {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  font-size: clamp(1.75rem, 4.4vw, 3.25rem);
+  flex-shrink: 0;
+}
+
+.vb-note {
+  font-size: var(--text-body);
+  line-height: 1.45;
+  max-width: 38ch;
+  opacity: 0.9;
+}
+
+@media (max-width: 680px) {
+  .verb-banner { flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; }
+  .vb-note { font-size: 14px; }
+}
+
+.vb-arrow {
+  margin-left: auto;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 244, 236, 0.55);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+@media (max-width: 680px) { .vb-arrow { display: none; } }
+
+.verb-banner:hover .vb-arrow {
+  background: var(--evoo);
+  border-color: var(--evoo);
+  color: var(--olive-ink);
+  transform: translateX(4px);
+}
+
+/* ============================ Signature de l'enseigne ============================ */
+
+.signature { text-align: center; }
+
+.signature-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  font-size: clamp(3.6rem, 13vw, 10rem);
+  margin: 18px 0 0;
+}
+
+.signature-foot {
+  margin-top: clamp(26px, 4vw, 42px);
+  padding-top: clamp(24px, 3vw, 34px);
+  border-top: 1px solid var(--olive-ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.signature-foot p { max-width: 52ch; }
 
 /* ============================ Panier de la semaine ============================ */
 

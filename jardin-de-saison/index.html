@@ -55,6 +55,7 @@
 
   <div class="hero-content">
     <p class="badge">Primeur — Paris 15ᵉ</p>
+    <p class="hero-name mask-reveal"><span>Jardin de Saison</span></p>
     <h1 class="display hero-title mask-reveal"><span>Le meilleur de la saison, chaque matin.</span></h1>
     <div class="hero-foot">
       <a href="#panier" class="btn btn--filled">
@@ -145,31 +146,84 @@
 <section class="band band--green" id="verbes">
   <div class="inner verbs-head">
     <p class="badge reveal">Ce qu'on en fait</p>
-    <h2 class="heading-sm mask-reveal"><span>Neuf verbes, un seul étal.</span></h2>
+    <h2 class="heading-sm mask-reveal"><span>Six verbes, un seul étal.</span></h2>
   </div>
 
-  <div class="scatter" id="scatter">
-    <b style="--s:1.55; left:2%;  top:2%;  transform:rotate(-4deg);"
-       data-note="Une reinette du Vexin, sans rien autour. C'est tout l'intérêt d'une pomme qui a du goût.">Croquer</b>
-    <b class="it" style="--s:0.9; left:40%; top:0%; transform:rotate(3deg);"
-       data-note="Le potimarron se cuit avec la peau : elle fond à la cuisson. Autant de gagné.">Éplucher</b>
-    <b style="--s:1.8; left:58%; top:9%; transform:rotate(-2deg);"
-       data-note="Blettes, ail, huile d'olive, quarante minutes à feu doux. Le dimanche soir au complet.">Mijoter</b>
-    <b class="circled" style="--s:1.15; left:5%; top:28%; transform:rotate(2deg);"
-       data-note="200°, quarante minutes, une pincée de sauge. Le potimarron ne demande rien de plus.">Rôtir</b>
-    <b class="it" style="--s:0.85; left:33%; top:37%; transform:rotate(-3deg);"
-       data-note="Les coings de la vallée de Chevreuse, en pâte de fruits, pour les ouvrir en décembre.">Confire</b>
-    <b style="--s:1.6; left:55%; top:42%; transform:rotate(3deg);"
-       data-note="Un plateau de figues de Solliès se finit toujours à deux. Prévoyez large.">Partager</b>
-    <b style="--s:1.1; left:1%;  top:57%; transform:rotate(-2deg);"
-       data-note="Le chasselas se mange à température ambiante, jamais sorti du froid.">Savourer</b>
-    <b style="--s:1.3; left:28%; top:70%; transform:rotate(2deg);"
-       data-note="Demain l'étal aura changé, et la semaine prochaine encore. C'est le principe.">Recommencer</b>
-    <b class="it" style="--s:0.8; left:74%; top:76%; transform:rotate(-3deg);"
-       data-note="Fleur de sel de Guérande, à la toute fin, jamais pendant la cuisson.">Saler</b>
-  </div>
+  <div class="verb-banners inner">
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#7b3f2e;"
+       data-photos="1568702846914-96b305d2aaeb|1560806887-1e4cd0b6cbd6|1570913149827-d2ac84ab3f9a"
+       data-alt="Pommes fraîches">
+      <span class="vb-word">Croquer</span>
+      <span class="vb-note">Une reinette du Vexin, sans rien autour.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
 
-  <p class="verb-note is-idle" id="verbNote">Survolez un verbe : on vous dit quoi en faire cette semaine.</p>
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#5d4326;"
+       data-photos="1547592180-85f173990554|1476718406336-bb5a9690ee2a|1604909052743-94e838986d24"
+       data-alt="Plat qui mijote">
+      <span class="vb-word">Mijoter</span>
+      <span class="vb-note">Blettes, ail, huile d'olive. Quarante minutes à feu doux.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#8a4f22;"
+       data-photos="1476124369491-e7addf5db371|1518492104633-130d0cc84637|1547592180-85f173990554"
+       data-alt="Légumes rôtis au four">
+      <span class="vb-word">Rôtir</span>
+      <span class="vb-note">200°, quarante minutes, une pincée de sauge.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#9c6218;"
+       data-photos="1571680322279-a226e6a4cc2a|1474979266404-7eaacbcd87c5|1601379329542-31c59a1c0d4f"
+       data-alt="Coings et pâte de fruits">
+      <span class="vb-word">Confire</span>
+      <span class="vb-note">Les coings, en pâte de fruits, pour les ouvrir en décembre.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#6b6a5e;"
+       data-photos="1472162072942-cd5147eb3902|1556909212-d5b604d0c90d|1518110925495-5fe2fda0442c"
+       data-alt="Fleur de sel">
+      <span class="vb-word">Saler</span>
+      <span class="vb-note">Fleur de sel de Guérande, à la toute fin seulement.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="verb-banner reveal" href="#recettes" style="--vb-fallback:#4f5a33;"
+       data-photos="1517248135467-4c7edcad34c4|1414235077428-338989a2e8c0|1490474418585-ba9bad8fd0ea"
+       data-alt="Table partagée">
+      <span class="vb-word">Partager</span>
+      <span class="vb-note">Un plateau de figues se finit toujours à deux.</span>
+      <span class="vb-arrow" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================ SIGNATURE DE L'ENSEIGNE ============================ -->
+<section class="band band--cream signature">
+  <div class="inner">
+    <p class="badge reveal">Primeur — Paris 15ᵉ</p>
+    <p class="signature-name mask-reveal"><span>Jardin<br>de Saison</span></p>
+    <div class="signature-foot reveal d2">
+      <p>Le nom dit déjà tout le programme : ce qui est de saison, et rien d'autre. Sur l'étal comme dans le panier.</p>
+      <a href="#infos" class="link-arrow">Venir à la boutique
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- ============================ PANIER DE LA SEMAINE ============================ -->

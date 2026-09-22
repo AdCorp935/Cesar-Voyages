@@ -149,42 +149,6 @@
   }
 
   /* ---------------------------------------------------------------------
-     Verbes : la légende suit le mot survolé
-  --------------------------------------------------------------------- */
-  var verbNote = document.getElementById('verbNote');
-
-  if (verbNote) {
-    var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    // sans souris, « survolez » ne veut rien dire : on passe à la tape
-    if (!canHover) {
-      verbNote.textContent = 'Touchez un verbe : on vous dit quoi en faire cette semaine.';
-    }
-
-    var idleNote = verbNote.textContent;
-
-    function showNote(word) {
-      verbNote.innerHTML = '<span class="vn-word">' + word.textContent + '</span> — ' +
-        word.getAttribute('data-note');
-      verbNote.classList.remove('is-idle');
-    }
-
-    function resetNote() {
-      verbNote.textContent = idleNote;
-      verbNote.classList.add('is-idle');
-    }
-
-    document.querySelectorAll('.scatter b[data-note]').forEach(function (word) {
-      if (canHover) {
-        word.addEventListener('mouseenter', function () { showNote(word); });
-        word.addEventListener('mouseleave', resetNote);
-      } else {
-        word.addEventListener('click', function () { showNote(word); });
-      }
-    });
-  }
-
-  /* ---------------------------------------------------------------------
      Horaires : jour courant et état ouvert/fermé
   --------------------------------------------------------------------- */
   var today = new Date().getDay();
