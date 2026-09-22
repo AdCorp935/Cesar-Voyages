@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jardin de Saison — Primeur à Paris 15ᵉ</title>
+<meta name="description" content="Jardin de Saison, primeur à Paris 15ᵉ : fruits et légumes de saison choisis chaque matin, épicerie fine et conseils de cuisine.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✳</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <a href="#top" class="wordmark">Jardin de Saison</a>
+
+  <nav class="nav-links">
+    <a href="#letal">L'étal</a>
+    <a href="#saison">De saison</a>
+    <a href="#panier">Le panier</a>
+    <a href="#recettes">Recettes</a>
+    <a href="#infos">Nous trouver</a>
+  </nav>
+
+  <div class="nav-right">
+    <a href="#infos" class="pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
+      Paris 15ᵉ
+    </a>
+    <a href="#infos" class="pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span id="openState">Horaires</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">Menu</button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#letal">L'étal</a>
+  <a href="#saison">De saison</a>
+  <a href="#panier">Le panier</a>
+  <a href="#recettes">Recettes</a>
+  <a href="#infos">Nous trouver</a>
+  <div class="mp-foot">Paris 15ᵉ — ouvert du mardi au dimanche</div>
+</div>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="photo photo--flat" id="heroPhoto" data-label="L'étal du matin"
+       data-photos="1542838132-92c53300491e|1488459716781-31db52582fe9|1518843875459-f738682238a6"
+       data-alt="Étal de fruits et légumes de saison"></div>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content">
+    <p class="badge">Primeur — Paris 15ᵉ</p>
+    <h1 class="display hero-title mask-reveal"><span>Le meilleur de la saison, chaque matin.</span></h1>
+    <div class="hero-foot">
+      <a href="#panier" class="btn btn--filled">
+        Le panier de la semaine
+        <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#letal" class="btn btn--ghost">Découvrir l'étal</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    Défiler
+  </div>
+</section>
+
+<!-- ============================ TICKER ============================ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Figues</span><span>Raisin chasselas</span><span>Potimarron</span><span>Blettes</span><span>Noix fraîches</span><span>Champignons</span><span>Poireaux</span><span>Coings</span>
+    <span>Figues</span><span>Raisin chasselas</span><span>Potimarron</span><span>Blettes</span><span>Noix fraîches</span><span>Champignons</span><span>Poireaux</span><span>Coings</span>
+  </div>
+</div>
+
+<!-- ============================ MANIFESTE (moutarde) ============================ -->
+<section class="band band--mustard" id="saison">
+  <div class="inner manifesto">
+    <p class="badge reveal">De saison, rien d'autre</p>
+    <h2 class="heading mask-reveal"><span>On ne vend que ce qui pousse maintenant.</span></h2>
+    <p class="lede reveal d2">Pas de fraises en décembre, pas de tomates en mars. Chaque matin, nous choisissons à Rungis et chez nos producteurs d'Île-de-France ce qui est réellement mûr — et rien d'autre. Ce qui manque à l'étal manque parce que ce n'est pas la saison.</p>
+    <a href="#panier" class="btn btn--ghost reveal d3">
+      Voir l'étal du jour
+      <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============================ BLOCS SCINDÉS ============================ -->
+<section class="band band--cream" id="letal">
+  <div class="inner">
+
+    <div class="split">
+      <div class="split-text reveal">
+        <p class="split-index">01 — Fruits</p>
+        <h3 class="heading-sm">Cueillis mûrs, vendus mûrs.</h3>
+        <p class="lede">Nous achetons court : la pêche de la Drôme part de l'arbre le lundi et vous la mangez le mercredi. C'est pour ça qu'elle sent quelque chose.</p>
+        <a href="#panier" class="link-arrow">Les fruits du moment
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="photo photo--landscape reveal d1" data-label="Fruits de saison"
+           data-photos="1610832958506-aa56368176cf|1519996529931-28324d5a630e|1564093497595-593b96d80180"
+           data-alt="Fruits de saison sur l'étal"></div>
+    </div>
+
+    <div class="split split--flip">
+      <div class="split-text reveal">
+        <p class="split-index">02 — Légumes</p>
+        <h3 class="heading-sm">Des producteurs qu'on peut nommer.</h3>
+        <p class="lede">Les salades viennent de Cergy, les courges de Milly-la-Forêt, les herbes d'un maraîcher de Saclay. On vous dira toujours qui a fait pousser ce que vous achetez.</p>
+        <a href="#panier" class="link-arrow">Nos maraîchers
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="photo photo--landscape reveal d1" data-label="Légumes du maraîcher"
+           data-photos="1540420773420-3366772f4999|1518977676601-b53f82aba655|1466637574441-749b8f19452f"
+           data-alt="Légumes frais du maraîcher"></div>
+    </div>
+
+    <div class="split">
+      <div class="split-text reveal">
+        <p class="split-index">03 — Épicerie</p>
+        <h3 class="heading-sm">Ce qu'il faut autour.</h3>
+        <p class="lede">Huile d'olive de première pression, sel de Guérande, herbes séchées, fromages de garde, pain au levain le week-end. Le strict nécessaire pour finir un plat.</p>
+        <a href="#recettes" class="link-arrow">Voir les recettes
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="photo photo--landscape reveal d1" data-label="Épicerie fine"
+           data-photos="1596040033229-a9821ebd058d|1474979266404-7eaacbcd87c5|1509440159596-0249088772ff"
+           data-alt="Épicerie fine et huile d'olive"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ MOTS DISPERSÉS (vert) ============================ -->
+<section class="band band--green">
+  <div class="scatter" id="scatter">
+    <b style="left:1%;  top:4%;  transform:rotate(-5deg);">Croquer</b>
+    <b style="left:44%; top:0%;  transform:rotate(3deg);">Éplucher</b>
+    <b style="left:74%; top:14%; transform:rotate(-2deg);">Mijoter</b>
+    <b style="left:10%; top:30%; transform:rotate(2deg);" class="circled">Rôtir</b>
+    <b style="left:42%; top:38%; transform:rotate(-4deg);">Confire</b>
+    <b style="left:70%; top:52%; transform:rotate(4deg);">Partager</b>
+    <b style="left:3%;  top:60%; transform:rotate(-3deg);">Savourer</b>
+    <b style="left:30%; top:74%; transform:rotate(2deg);">Recommencer</b>
+    <b style="left:76%; top:82%; transform:rotate(-2deg);">Saler</b>
+  </div>
+</section>
+
+<!-- ============================ PANIER DE LA SEMAINE ============================ -->
+<section class="band band--cream" id="panier">
+  <div class="inner">
+    <div class="basket-head">
+      <div>
+        <p class="badge reveal">Semaine du <span id="weekOf">22 septembre</span></p>
+        <h2 class="heading mask-reveal" style="margin-top:18px;"><span>Le panier<br>de la semaine.</span></h2>
+      </div>
+      <p class="lede reveal d2" style="max-width:36ch;">Huit produits choisis ce matin. Les prix suivent le marché — ils bougent chaque semaine, et c'est normal.</p>
+    </div>
+
+    <div class="produce-grid">
+      <article class="reveal zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Figues"
+             data-photos="1601379329542-31c59a1c0d4f|1568584711075-3d021a7c3ca3"
+             data-alt="Figues violettes"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Figues violettes</span>
+          <span class="produce-price">6,90 € / kg</span>
+        </div>
+        <p class="produce-origin">Solliès, Var — pleine saison</p>
+      </article>
+
+      <article class="reveal d1 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Raisin"
+             data-photos="1537640538966-79f369143f8f|1599819177626-b50f9dc3ba1a"
+             data-alt="Grappes de raisin chasselas"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Chasselas</span>
+          <span class="produce-price">5,40 € / kg</span>
+        </div>
+        <p class="produce-origin">Moissac, Tarn-et-Garonne — AOP</p>
+      </article>
+
+      <article class="reveal d2 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Potimarron"
+             data-photos="1570586437263-ab629fccc818|1506917728037-b6af01a7d403"
+             data-alt="Potimarrons oranges"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Potimarron</span>
+          <span class="produce-price">3,20 € / kg</span>
+        </div>
+        <p class="produce-origin">Milly-la-Forêt, Essonne</p>
+      </article>
+
+      <article class="reveal d3 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Champignons"
+             data-photos="1504545102780-26774c1bb073|1518637148063-c3dee1e8fa76"
+             data-alt="Champignons de Paris frais"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Champignons de Paris</span>
+          <span class="produce-price">7,80 € / kg</span>
+        </div>
+        <p class="produce-origin">Carrières-sur-Seine — cueillis hier</p>
+      </article>
+
+      <article class="reveal zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Poireaux"
+             data-photos="1580201092675-a0a6a6cafbb1|1508747703725-719777637510"
+             data-alt="Bottes de poireaux"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Poireaux</span>
+          <span class="produce-price">2,80 € / kg</span>
+        </div>
+        <p class="produce-origin">Cergy, Val-d'Oise</p>
+      </article>
+
+      <article class="reveal d1 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Noix"
+             data-photos="1508747703725-719777637510|1563412885-e335dc95c512"
+             data-alt="Noix fraîches"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Noix fraîches</span>
+          <span class="produce-price">9,50 € / kg</span>
+        </div>
+        <p class="produce-origin">Grenoble, Isère — AOP</p>
+      </article>
+
+      <article class="reveal d2 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Blettes"
+             data-photos="1576045057995-568f588f82fb|1518977676601-b53f82aba655"
+             data-alt="Blettes fraîches"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Blettes</span>
+          <span class="produce-price">3,60 € / botte</span>
+        </div>
+        <p class="produce-origin">Saclay, Essonne</p>
+      </article>
+
+      <article class="reveal d3 zoom-on-hover">
+        <div class="photo photo--portrait" data-label="Coings"
+             data-photos="1571680322279-a226e6a4cc2a|1601379329542-31c59a1c0d4f"
+             data-alt="Coings dorés"></div>
+        <div class="produce-caption">
+          <span class="produce-name">Coings</span>
+          <span class="produce-price">4,20 € / kg</span>
+        </div>
+        <p class="produce-origin">Vallée de Chevreuse — pour les pâtes de fruits</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RECETTES (pêche) ============================ -->
+<section class="band band--peach" id="recettes">
+  <div class="inner">
+    <div style="text-align:center; margin-bottom:clamp(36px,5vw,60px);">
+      <p class="badge reveal">À faire ce soir</p>
+      <h2 class="heading mask-reveal" style="margin-top:18px;"><span>Trois façons de s'en sortir.</span></h2>
+    </div>
+
+    <div class="recipe-grid">
+      <article class="reveal zoom-on-hover">
+        <div class="photo photo--square" data-label="Potimarron rôti"
+             data-photos="1476124369491-e7addf5db371|1547592180-85f173990554"
+             data-alt="Potimarron rôti au four"></div>
+        <div class="recipe-meta">
+          <p class="r-label">Recette</p>
+          <p class="r-name">Potimarron rôti, sauge et noisettes</p>
+          <a href="#recettes" class="link-arrow">Voir la recette
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="reveal d1 zoom-on-hover">
+        <div class="photo photo--square" data-label="Salade de figues"
+             data-photos="1490474418585-ba9bad8fd0ea|1512621776951-a57141f2eefd"
+             data-alt="Salade de figues et burrata"></div>
+        <div class="recipe-meta">
+          <p class="r-label">Recette</p>
+          <p class="r-name">Figues, burrata, huile d'olive poivrée</p>
+          <a href="#recettes" class="link-arrow">Voir la recette
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="reveal d2 zoom-on-hover">
+        <div class="photo photo--square" data-label="Poêlée de champignons"
+             data-photos="1518492104633-130d0cc84637|1476718406336-bb5a9690ee2a"
+             data-alt="Poêlée de champignons à l'ail"></div>
+        <div class="recipe-meta">
+          <p class="r-label">Recette</p>
+          <p class="r-name">Champignons à l'ail et persil plat</p>
+          <a href="#recettes" class="link-arrow">Voir la recette
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ NOTRE HISTOIRE ============================ -->
+<section class="band band--cream">
+  <div class="inner split">
+    <div class="split-text reveal">
+      <p class="split-index">La maison</p>
+      <h3 class="heading mask-reveal"><span>Une boutique, une équipe, un marché.</span></h3>
+      <p class="lede" style="margin-top:20px;">Jardin de Saison est un primeur de quartier : quatre personnes, un camion, et un passage à Rungis avant le lever du jour. On connaît nos clients par leur prénom et leurs enfants par leurs allergies. Ce n'est pas du marketing, c'est juste un commerce de rue qui fonctionne.</p>
+
+      <div class="stat-row">
+        <div><p class="s-num" data-count="6">0</p><p class="s-label">jours par semaine</p></div>
+        <div><p class="s-num"><span data-count="30">0</span>+</p><p class="s-label">producteurs partenaires</p></div>
+        <div><p class="s-num">5h</p><p class="s-label">départ pour Rungis</p></div>
+      </div>
+    </div>
+    <div class="photo photo--portrait reveal d1" data-label="La boutique"
+         data-photos="1488459716781-31db52582fe9|1542838132-92c53300491e"
+         data-alt="Intérieur de la boutique du primeur"></div>
+  </div>
+</section>
+
+<!-- ============================ INFOS PRATIQUES ============================ -->
+<section class="band band--peach" id="infos">
+  <div class="inner info-grid">
+    <div class="reveal">
+      <p class="badge">Nous trouver</p>
+      <h2 class="heading mask-reveal" style="margin-top:18px;"><span>Passez nous voir.</span></h2>
+
+      <!-- TODO : confirmer l'adresse exacte, le téléphone et les horaires réels de la boutique -->
+      <div class="contact-lines">
+        <p><strong>Jardin de Saison</strong><br>Paris 15ᵉ — adresse à confirmer</p>
+        <a href="https://www.google.fr/maps/place/JARDIN+DE+SAISON/@48.8456092,2.2818993,17z" target="_blank" rel="noopener" class="link-arrow">
+          Ouvrir dans Google Maps
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <ul class="hours" id="hours">
+        <li data-day="1"><span class="h-day">Lundi</span><span>Fermé</span></li>
+        <li data-day="2"><span class="h-day">Mardi</span><span>8h30 – 13h00 · 16h00 – 20h00</span></li>
+        <li data-day="3"><span class="h-day">Mercredi</span><span>8h30 – 13h00 · 16h00 – 20h00</span></li>
+        <li data-day="4"><span class="h-day">Jeudi</span><span>8h30 – 13h00 · 16h00 – 20h00</span></li>
+        <li data-day="5"><span class="h-day">Vendredi</span><span>8h30 – 13h00 · 16h00 – 20h00</span></li>
+        <li data-day="6"><span class="h-day">Samedi</span><span>8h30 – 20h00</span></li>
+        <li data-day="0"><span class="h-day">Dimanche</span><span>8h30 – 13h30</span></li>
+      </ul>
+    </div>
+
+    <div class="photo photo--square reveal d1" data-label="La devanture"
+         data-photos="1518843875459-f738682238a6|1533900298318-6b8da08a523e"
+         data-alt="Devanture du primeur"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ PIED DE PAGE ============================ -->
+<div class="photo photo--flat footer-photo" data-label="Herbes fraîches"
+     data-photos="1466637574441-749b8f19452f|1540420773420-3366772f4999"
+     data-alt="Herbes fraîches et légumes"></div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <p class="wordmark">Jardin<br>de Saison</p>
+    <div class="footer-cols">
+      <div>
+        <h4>La boutique</h4>
+        <ul>
+          <li><a href="#letal">L'étal</a></li>
+          <li><a href="#panier">Le panier</a></li>
+          <li><a href="#recettes">Recettes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Infos</h4>
+        <ul>
+          <li><a href="#infos">Horaires</a></li>
+          <li><a href="#infos">Nous trouver</a></li>
+          <li><a href="#saison">De saison</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><span>Paris 15ᵉ</span></li>
+          <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+          <li><a href="mailto:bonjour@jardindesaison.fr">bonjour@jardindesaison.fr</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year">2026</span> Jardin de Saison — primeur à Paris 15ᵉ</span>
+    <span>Mentions légales · Confidentialité</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Retour en haut">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
