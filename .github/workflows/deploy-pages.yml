@@ -29,6 +29,18 @@ jobs:
         with:
           enablement: true
 
+      # Sans ce marquage, un visiteur déjà venu garde en cache la feuille de
+      # style et le script : le HTML change, le style non, et le site paraît
+      # figé. Le SHA du commit force un rechargement à chaque déploiement.
+      - name: Versionner les feuilles de style et les scripts
+        run: |
+          VER="${GITHUB_SHA::8}"
+          find . -name '*.html' -not -path './.git/*' -print0 \
+            | xargs -0 --no-run-if-empty sed -i -E \
+                "s@(href=\"[^\"]*\.css)\"@\1?v=$VER\"@g; s@(src=\"[^\"]*\.js)\"@\1?v=$VER\"@g"
+          echo "Assets versionnés en $VER :"
+          grep -rhoE '(href|src)="[^"]*\.(css|js)\?v=[^"]*"' --include='*.html' . | sort -u
+
       - name: Uploader l'artefact du site
         uses: actions/upload-pages-artifact@v3
         with:
